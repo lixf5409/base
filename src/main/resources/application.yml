@@ -7,6 +7,7 @@ spring:
     view:
       prefix: /WEB-INF/jsp/
       suffix: .jsp
+#    static-path-pattern: /**
 mybatis:
   mapper-locations: classpath:/mybatis/mapper/*.xml
   config-location:  classpath:/mybatis/config/mybatis-config.xml
