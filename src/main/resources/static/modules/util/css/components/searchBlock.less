@@ -1,0 +1,48 @@
+/* 容器样式 */
+.pd-search-container{
+    padding: 0px;
+    box-shadow: none;
+    margin: 3px 0;
+    border: 1px solid #ddd;
+}
+
+/* 标题样式 */
+.pd-search-title{
+    -webkit-user-select:none;
+    box-sizing: content-box;
+    position: relative;
+    min-height: 22px;
+    background: #f9f9f9;
+    /*background-image: -webkit-linear-gradient(top, #ffffff 0%, #eeeeee 100%);
+    background-image: linear-gradient(to bottom, #ffffff 0%, #eeeeee 100%);
+    background-repeat: repeat-x;*/
+    border-bottom: 1px solid #DDD;
+    color: #1d75b3;
+    font-size: 13px;
+    font-family: Arial, "微软雅黑", "宋体", Tahoma, Helvetica, sans-serif;
+    padding: 5px 12px;
+}
+
+.pd-expandMode .pd-search-title{
+    border-bottom-width: 1px;
+}
+
+.pd-collapseMode .pd-search-title{
+    border-bottom-width: 0px;
+}
+
+/* 主体部分样式*/
+.pd-search-body{
+    white-space: nowrap;
+    margin: 8px 0px;
+}
+
+/* 展开、折叠样式 */
+.pd-search-click {
+    display: inline-block;
+    padding: 0 10px;
+    line-height: 21px;
+    float:right;
+    position: relative;
+    cursor: hand;
+}

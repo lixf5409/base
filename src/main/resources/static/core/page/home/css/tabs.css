@@ -1,0 +1,179 @@
+/* reset */
+.cs-tabs-nav a {
+	color: inherit;
+}
+.cs-tabs-nav a:hover, .cs-tabs-nav a:focus{
+	text-decoration: none;
+}
+/* layout */
+.cs-tabs-nav {
+	position: relative;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
+}
+.cs-tabs-nav .cs-tabs-btn-left{
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 40px;
+}
+.cs-tabs-nav .cs-nav-wrap{
+	position: absolute;
+	left: 40px;
+	top: 0;
+	bottom: 0;
+	overflow: hidden;
+	right: 180px;
+}
+.cs-tabs-nav .cs-nav-wrap .cs-nav-list{
+	position: absolute;
+	top: 0;
+	left: 0;
+	white-space: nowrap;
+}
+.cs-tabs-nav .cs-tabs-btn-right{
+	position: absolute;
+	right: 140px;
+	top: 0;
+	bottom: 0;
+	width: 40px;
+}
+.cs-tabs-nav .cs-tabs-btn-nav{
+	position: absolute;
+	right: 80px;
+	top: 0;
+	bottom: 0;
+	width: 60px;
+}
+.cs-tabs-nav .cs-tabs-btn-opts{
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 80px;
+}
+.cs-tabs-nav .dropdown-menu>li{
+	padding: 4px 6px;
+}
+.cs-tabs-nav .dropdown-menu>li>a{
+	padding-left: 10px;
+	padding-right: 20px;
+}
+.cs-tabs-nav .cs-tabs-btn-nav>.dropdown-toggle,
+.cs-tabs-nav .cs-tabs-btn-opts>.dropdown-toggle{
+	display: block;
+	height: 100%;
+}
+.cs-tabs-nav .cs-tabs-btn-nav .dropdown-menu{
+	max-width: 300px;
+	max-height: 400px;
+	overflow: auto;
+}
+.cs-tabs-nav .cs-tabs-btn-nav .dropdown-menu a{
+	position: relative;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.cs-tabs-nav .cs-nav-wrap .cs-nav-list a{
+	position: relative;
+	display: inline-block;
+	padding: 0 15px 0 15px;
+}
+.cs-tabs-nav .cs-nav-wrap .cs-nav-list a .cs-nav-btn-refresh{
+	display: none;
+}
+.cs-tabs-nav .cs-nav-wrap .cs-nav-list a.active .cs-nav-btn-refresh{
+	display: inline;
+}
+.cs-tabs-nav .cs-tabs-btn-nav .dropdown-menu a i{
+	position: absolute;
+	right: 5px;
+	top: 5px;
+}
+.cs-tabs-content{
+	height: 100%;
+	overflow: hidden;
+}
+.cs-tabs-content .cs-tabs-panel{
+	display: none;
+	position: relative;
+	height: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.cs-tabs-content .cs-tabs-panel.active{
+	display: block;
+}
+.cs-tabs-content .cs-tabs-panel iframe{/* hack:iframe双层滚动条 */
+	display: block;
+}
+/* 样式 肤色 */
+.cs-tabs-nav {
+	border-bottom: 1px solid #cccccc;
+	border-left: 1px solid #cccccc;
+	border-right: 1px solid #cccccc;
+}
+.cs-tabs-nav .cs-tabs-btn-left{
+	border-top: 1px solid #cccccc;
+	border-right: 1px solid #cccccc;
+}
+.cs-tabs-nav .cs-nav-wrap .cs-nav-list a{
+	border-top: 1px solid #cccccc;
+	border-right: 1px solid #cccccc;
+}
+.cs-tabs-nav .cs-nav-wrap .cs-nav-list a.active:before{
+	content: '';
+	position: absolute;
+	left: -1px;
+	right:-1px;
+	top: -1px;
+	height: 3px;
+	background: #4578ed;
+	background: -webkit-linear-gradient(left, #4578ed, #38b3fb); /* Safari 5.1 - 6.0 */
+	background:-moz-linear-gradient(left, #4578ed, #38b3fb); /* Firefox 3.6 - 15 */
+	background: -o-linear-gradient(left, #4578ed, #38b3fb); /* Opera 11.1 - 12.0 */
+	background: -ms-linear-gradient(left, #4578ed, #38b3fb); /* IE9+ */
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=1,startColorStr=#4578ed,endColorStr=#38b3fb);/* IE9- gradientType=1表示水平渐变，0表示垂直渐变*/
+	background: linear-gradient(left, #4578ed, #38b3fb); /* 标准的语法 */
+}
+.cs-tabs-nav .cs-tabs-btn-right{
+	border-top: 1px solid #cccccc;
+	border-left: 1px solid #cccccc;
+}
+.cs-tabs-nav .cs-tabs-btn-nav{
+	border-top: 1px solid #cccccc;
+	border-left: 1px solid #cccccc;
+}
+.cs-tabs-nav .cs-tabs-btn-opts{
+	border-top: 1px solid #cccccc;
+	border-left: 1px solid #cccccc;
+}
+.cs-tabs-nav .cs-nav-wrap .cs-nav-list a.active,
+.cs-tabs-nav .cs-tabs-btn-nav .dropdown-menu li.active a{
+	background: #e4e9fc !important;
+	color: #4579ed !important;
+}
+.cs-tabs-nav .cs-tabs-btn-left,
+.cs-tabs-nav .cs-tabs-btn-right,
+.cs-tabs-nav .cs-tabs-btn-nav>.dropdown-toggle,
+.cs-tabs-nav .cs-tabs-btn-opts>.dropdown-toggle,
+.cs-tabs-nav .cs-nav-wrap .cs-nav-list a{
+	background: #f0f0f0;
+}
+.cs-tabs-nav .cs-tabs-btn-left:hover,
+.cs-tabs-nav .cs-tabs-btn-right:hover,
+.cs-tabs-nav .cs-tabs-btn-nav>.dropdown-toggle:hover,
+.cs-tabs-nav .cs-tabs-btn-opts>.dropdown-toggle:hover,
+.cs-tabs-nav .cs-nav-wrap .cs-nav-list a:hover{
+	background: #e7e7e7;
+}
+.cs-tabs-nav .cs-nav-wrap .cs-nav-list a i:hover, 
+.cs-tabs-nav .cs-tabs-btn-nav .dropdown-menu a i:hover{
+	text-shadow: 0 0 1px;
+}
+.cs-tabs-content {
+	background: #fff;
+}

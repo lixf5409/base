@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://127.0.0.1:3306/demouser?characterEncoding=UTF-8
+    username: root
+    password: lixf
+    driver-class-name: com.mysql.jdbc.Driver
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: beans,metrics,health
+  endpoint:
+    health:
+      show-details: always

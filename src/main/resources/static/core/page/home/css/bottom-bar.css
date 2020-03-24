@@ -1,0 +1,54 @@
+/* 快捷菜单相关css （暂时没用）*/
+.cs-bt-tbar{
+	position: fixed;
+	z-index: 1020;
+	right: 20px;
+	bottom: 20px;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	cursor: pointer;
+	color: #fff;
+	font-size: 24px;
+	background: #bbb;
+	opacity: .7;
+	filter: alpha(opacity=70);
+}
+.cs-bt-tbar-tab{
+	display: block;
+	position: relative;
+}
+.cs-bt-tbar-tab:hover{
+	background: #999;
+}
+.cs-bt-tbar-sub.shortcut{
+	position: absolute;
+	display: none;
+	width: 190px;
+	height: 220px;
+	bottom: 0;
+	left: -190px;
+	background: #fff;
+	border: 1px solid #eaeaea;
+	box-shadow : 0 0 5px 0 rgba(0, 0, 0, .3);
+    -webkit-box-shadow : 0 0 5px 0 rgba(0, 0, 0, .3);
+    -moz-box-shadow : 0 0 5px 0 rgba(0, 0, 0, .3);
+    cursor: default;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.cs-bt-tbar-sub.shortcut a{
+	float: left;
+	color: #000;
+	width: 50%;
+	line-height: 30px;
+	text-align: left;
+	padding-left: 5px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.cs-bt-tbar-sub.shortcut a:hover{
+	text-decoration: underline;	
+}

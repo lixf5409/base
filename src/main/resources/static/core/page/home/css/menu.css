@@ -1,0 +1,199 @@
+/*---------------------------------------------------------------------------------------------------- reset */
+.rx-menu ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.rx-menu a {
+	text-decoration: none;
+	color: inherit;
+}
+/*---------------------------------------------------------------------------------------------------- layout */
+.rx-menu .rx-menu-node {
+    position: relative;
+    display: block;
+    height: 33px;
+    line-height: 33px;
+    white-space: nowrap;
+}
+.rx-menu .rx-menu-icon,
+.rx-menu .rx-menu-switch,
+.rx-menu .rx-menu-line,
+.rx-menu .rx-menu-pointer,
+.rx-menu .rx-menu-sub {
+	display: none;
+}
+.rx-menu .rx-menu-item.open>.rx-menu-sub{
+    display: block;
+}
+.rx-menu .rx-menu-pointer {
+	position: absolute;
+	top:10px;
+	width: 12px;
+	height: 12px;
+	background-image: url("../image/menu.png");
+	background-repeat: no-repeat;
+	background-position: -155px -117px;
+}
+.rx-menu .rx-menu-node:hover .rx-menu-pointer,
+.rx-menu .rx-menu-node.active .rx-menu-pointer {
+	background-position: -190px -117px;
+}
+/* 第一级 */
+.rx-menu>.rx-menu-item>.rx-menu-node{
+	height: 45px;
+	line-height: 45px;
+	font-size: 14px;
+	padding-left: 15px;
+}
+.rx-menu>.rx-menu-item>.rx-menu-node .rx-menu-icon {
+	display: inline-block;
+	margin-right: 8px;
+	font-size: 18px;
+	vertical-align: middle;
+}
+/* 第二级 */
+.rx-menu>.rx-menu-item>.rx-menu-sub>.rx-menu-item>.rx-menu-node{
+	padding-left: 15px;
+}
+.rx-menu>.rx-menu-item>.rx-menu-sub>.rx-menu-item>.rx-menu-node .rx-menu-switch {
+	display: block;
+	width: 12px;
+	height: 12px;
+	position: absolute;
+	right: 10px;
+	top:10px;
+	background-image: url("../image/menu.png");
+	background-repeat: no-repeat;
+	background-position: -49px -120px;
+}
+.rx-menu>.rx-menu-item>.rx-menu-sub>.rx-menu-item.open>.rx-menu-node .rx-menu-switch {
+	background-position: -12px -120px;
+}
+/* 第三级 */
+.rx-menu>.rx-menu-item>.rx-menu-sub>.rx-menu-item>.rx-menu-sub>.rx-menu-item>.rx-menu-node {
+	padding-left: 40px;
+}
+.rx-menu>.rx-menu-item>.rx-menu-sub>.rx-menu-item>.rx-menu-sub>.rx-menu-item>.rx-menu-node .rx-menu-line {
+	display: block;
+	position: absolute;
+	width: 10px;
+	top: 0;
+	bottom:0;
+	left: 15px;
+	background-image: url("../image/menu.png");
+	background-repeat: no-repeat;
+	background-position: -16px -158px;
+}
+.rx-menu>.rx-menu-item>.rx-menu-sub>.rx-menu-item>.rx-menu-sub>.rx-menu-item>.rx-menu-node .rx-menu-switch {
+	display: block;
+	width: 12px;
+	height: 12px;
+	position: absolute;
+	left: 25px;
+	top:10px;
+	background-image: url("../image/menu.png");
+	background-repeat: no-repeat;
+	background-position: -49px -118px;
+}
+.rx-menu>.rx-menu-item>.rx-menu-sub>.rx-menu-item>.rx-menu-sub>.rx-menu-item.open>.rx-menu-node .rx-menu-switch {
+	background-position: -12px -118px;
+}
+.rx-menu>.rx-menu-item>.rx-menu-sub>.rx-menu-item>.rx-menu-sub>.rx-menu-item>.rx-menu-node .rx-menu-pointer {
+	display: block;
+	left: 25px;
+}
+/* 第四级 */
+.rx-menu>.rx-menu-item>.rx-menu-sub>.rx-menu-item>.rx-menu-sub>.rx-menu-item>.rx-menu-sub>.rx-menu-item>.rx-menu-node {
+	padding-left: 55px;
+}
+.rx-menu>.rx-menu-item>.rx-menu-sub>.rx-menu-item>.rx-menu-sub>.rx-menu-item>.rx-menu-sub>.rx-menu-item>.rx-menu-node .rx-menu-line {
+	display: block;
+	position: absolute;
+	width: 20px;
+	top: 0;
+	bottom:0;
+	left: 15px;
+	background-image: url("../image/menu.png");
+	background-repeat: no-repeat;
+	background-position: -16px -212px;
+}
+.rx-menu>.rx-menu-item>.rx-menu-sub>.rx-menu-item>.rx-menu-sub>.rx-menu-item>.rx-menu-sub>.rx-menu-item>.rx-menu-node .rx-menu-switch {
+	display: block;
+	width: 12px;
+	height: 12px;
+	position: absolute;
+	left: 40px;
+	top:10px;
+	background-image: url("../image/menu.png");
+	background-repeat: no-repeat;
+	background-position: -84px -118px;
+}
+.rx-menu>.rx-menu-item>.rx-menu-sub>.rx-menu-item>.rx-menu-sub>.rx-menu-item>.rx-menu-sub>.rx-menu-item.open>.rx-menu-node .rx-menu-switch {
+	background-position: -119px -118px;
+}
+.rx-menu>.rx-menu-item>.rx-menu-sub>.rx-menu-item>.rx-menu-sub>.rx-menu-item>.rx-menu-sub>.rx-menu-item>.rx-menu-node .rx-menu-pointer {
+	display: block;
+	left: 39px;
+}
+/* 第五级 */
+.rx-menu>.rx-menu-item>.rx-menu-sub>.rx-menu-item>.rx-menu-sub>.rx-menu-item>.rx-menu-sub>.rx-menu-item>.rx-menu-sub>.rx-menu-item>.rx-menu-node {
+	padding-left: 69px;
+}
+.rx-menu>.rx-menu-item>.rx-menu-sub>.rx-menu-item>.rx-menu-sub>.rx-menu-item>.rx-menu-sub>.rx-menu-item>.rx-menu-sub>.rx-menu-item>.rx-menu-node .rx-menu-line{
+	display: block;
+	position: absolute;
+	width: 38px;
+	top: 0;
+	bottom:0;
+	left: 15px;
+	background-image: url("../image/menu.png");
+	background-repeat: no-repeat;
+	background-position: -16px -265px;
+}
+.rx-menu>.rx-menu-item>.rx-menu-sub>.rx-menu-item>.rx-menu-sub>.rx-menu-item>.rx-menu-sub>.rx-menu-item>.rx-menu-sub>.rx-menu-item>.rx-menu-node .rx-menu-pointer {
+	display: block;
+	left: 55px;
+}
+/* -----------------------------------------------------------------------------------------------------------------样式 肤色 */
+.rx-menu .rx-menu-item .rx-menu-node:hover,
+.rx-menu .rx-menu-item .rx-menu-node.active, /* 菜单实体 */
+.rx-menu>.rx-menu-item.open>.rx-menu-node { /* 第一级 */
+	color: #4579ed;
+	background: #e4e9fc;
+}
+/*.rx-menu .rx-menu-item .rx-menu-node:hover:before,
+.rx-menu .rx-menu-item .rx-menu-node.active:before,*/ /* 菜单实体 */
+.rx-menu>.rx-menu-item>.rx-menu-node:hover:before,
+.rx-menu>.rx-menu-item>.rx-menu-node.active:before,
+.rx-menu>.rx-menu-item.open>.rx-menu-node:before { /* 第一级 */
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 4px;
+	background: #4578ed;
+	background: -webkit-linear-gradient(left, #4578ed, #38b3fb); /* Safari 5.1 - 6.0 */
+	background:-moz-linear-gradient(left, #4578ed, #38b3fb); /* Firefox 3.6 - 15 */
+	background: -o-linear-gradient(left, #4578ed, #38b3fb); /* Opera 11.1 - 12.0 */
+	background: -ms-linear-gradient(left, #4578ed, #38b3fb); /* IE9+ */
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=1,startColorStr=#4578ed,endColorStr=#38b3fb);/* IE9- gradientType=1表示水平渐变，0表示垂直渐变*/
+	background: linear-gradient(left, #4578ed, #38b3fb); /* 标准的语法 */
+}
+.rx-menu .rx-menu-sub .rx-menu-item .rx-menu-node {
+	border-top: 1px solid #e8edff;
+}
+.rx-menu>.rx-menu-item>.rx-menu-sub>.rx-menu-item:first-child>.rx-menu-node {/* 第二级里面的第一个node不显示上边框 */
+}
+/* 第一级 */
+.rx-menu>.rx-menu-item {
+	border-bottom: 1px solid #e7e7e7;
+}
+.rx-menu>.rx-menu-item.open>.rx-menu-node {
+	font-weight: bold;
+}
+.rx-menu>.rx-menu-item>.rx-menu-sub {
+	background: #f6f8ff;
+}
+
