@@ -19,10 +19,10 @@
     </properties>
 
     <dependencies>
-      <!--  <dependency>
+       <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>-->
+        </dependency>
         <!-- servlet依赖. -->
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -81,6 +81,17 @@
     </dependencies>
 
     <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>mybatis/**</include>
+                    <include>static/**</include>
+                    <include>application.yml</include>
+                    <include>application-dev.yml</include>
+                </includes>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

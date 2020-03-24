@@ -3,8 +3,7 @@ define([
     "PDHomeDir/js/tabs",
     "PDHomeDir/js/menu",
     "PDHomeDir/js/homeExtend",
-    "PDHomeDir/js/pageClose",
-    "PDCoreDir/page/login/js/reLogin"
+    "PDHomeDir/js/pageClose"
     ],function (Router, Tabs, Menu, HomeExtend, PageClose) {
 	
 	function init() {
@@ -155,11 +154,11 @@ define([
 		
 		// 判断欢迎页是否已经创建了，不管初始化时的路由是什么都要初始化欢迎页
 		if (r == "welcome") {
-			addTabWelcome();
+			// addTabWelcome();
 			return ;
 		}
 		if (!tabs.exists("welcome")) {
-			addTabWelcome();
+			// addTabWelcome();
 		}
 		
 		if (r == "404") { // 404页面

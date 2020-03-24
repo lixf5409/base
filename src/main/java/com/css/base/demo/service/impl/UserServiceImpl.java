@@ -1,8 +1,8 @@
 package com.css.base.demo.service.impl;
 
-import com.example.springcloud.user.dao.entity.User;
-import com.example.springcloud.user.dao.mapper.UserMapper;
-import com.example.springcloud.user.service.IUserService;
+import com.css.base.demo.dao.entity.User;
+import com.css.base.demo.dao.mapper.UserMapper;
+import com.css.base.demo.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
