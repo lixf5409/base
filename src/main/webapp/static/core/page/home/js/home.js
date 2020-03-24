@@ -286,7 +286,7 @@ define([
 	// 添加菜单
 	function addTabMenu(r) {
 		var menuData = menu.getRouterDataByRouter(r);
-		
+		//TODO 菜单打开page
 		if (menuData) { //查到对应的菜单
 			if (menuData.menuOpen == "1" || menuData.menuOpen == "3") { // 以room自带容器打开
 				tabs.addTab({
@@ -294,11 +294,11 @@ define([
 					title: menuData.menuName,
 					_menu: true,
 					remote: {
-						url: getServicePath() + "/page",
+						url: getServer() + "/page",
 						iframe: true,
 						param:  {
-    						//ctrl : menu.menuCtrlUrl,
-    						//html : menu.menuUrl,
+    						ctrl : menu.menuCtrlUrl,
+    						html : menu.menuUrl,
     						//service : menu.menuService,
     						//tabId : menu.menuRouter //tab组件中自动添加tabId参数
 						}

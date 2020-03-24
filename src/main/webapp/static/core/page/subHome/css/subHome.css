@@ -1,0 +1,150 @@
+/* ----------------------------------------------reset---------------------------------------*/
+	body{ 
+		margin:0; 
+		padding:0; 
+		font-size:13px; 
+		color:#333333; 
+		font-family:"Microsoft yahei";
+	}
+	h1,h2,h3,h4,h5,p,ul,ol,li{ 
+		margin:0; 
+		padding:0;
+	}
+	ul,ol{
+		list-style:none;
+	}
+	img{ 
+		border:none; 
+		vertical-align:top;
+	}
+	a{ 
+		font-size:13px;
+		text-decoration:none; 
+		cursor: pointer;}
+	a:hover{
+		text-decoration:none;
+	}
+/* ----------------------------------------------bootstrap-modify---------------------------------------*/
+/* label */
+	label{
+	    font-weight: normal;
+	}
+/* form */
+	.form-group{
+	    margin-bottom: 8px;
+	}
+/* tab */
+	/* nav-tabs */
+	.nav-tabs>li>a,.nav-tabs.nav-justified>li>a{
+	    -webkit-border-radius: 2px 2px 0 0;
+	    -moz-border-radius: 2px 2px 0 0;
+	    border-radius: 2px 2px 0 0;
+	    padding: 6px 15px;
+	    border-top: 2px solid transparent;
+	}
+	.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
+	    border-top: 2px solid #45c3eb;
+	}
+	.nav-tabs.nav-justified>li.active>a, .nav-tabs.nav-justified>li.active>a:focus, .nav-tabs.nav-justified>li.active>a:hover{
+	    border-top: 2px solid #45c3eb;
+	}	
+	/* tab-content */
+	.tab-content>div{
+	    padding-top: 5px;
+	}
+/* modal-dialog */
+	.modal-dialog h4{
+	    font-size: 15px;
+	}
+	.modal-header .close{
+	    margin-top: 0;
+	}
+	.modal-header{
+	    padding: 10px 15px;
+	}
+	.modal-backdrop.in{
+		filter: alpha(opacity=20);
+		opacity: .2;
+	}
+
+/* ----------------------------------------------other---------------------------------------*/
+/* required(必填项) */
+	.requird{
+	    color: #ff0000;
+	}
+/* 侧边栏模板样式 */
+	.tab-header{
+	    margin-top: 10px;
+	    margin-bottom: 5px;
+	    overflow: hidden;
+	}
+	.tab-header .title{
+	    float: left;
+	    font-size: 18px;
+	    font-weight: bold;
+	    height: 30px;
+	    line-height: 30px;
+	}
+	.tab-header .title .fa{
+	    font-size: 18px;
+	    margin-right: 8px;
+	}
+	.tab-header .tool{
+	    float: right;
+	    margin-right: 20px;
+	}
+	.single-panel{
+	    padding-top: 15px;
+	    border-top: 1px solid #bbb;
+	}
+/*附件上传中的注意事项*/
+	.attention_content{
+	    display: block;
+	    background: #f6f6f6;
+	    margin: 10px 20px 10px 20px;
+	    padding: 10px;
+	    font-family: Arial,"Microsoft YaHei", "SimSun", Tahoma, Helvetica, sans-serif;
+	    font-size: 12px;
+	    line-height: 2em;
+	}
+	.attention_content ol{
+	    padding-left: 40px;
+	    list-style-type: decimal;
+	}
+/* 表单验证相关 */
+	.cs-help-block{
+	    display: block;
+	    margin-top: 5px;
+	    color: #a94442;
+	}
+	.cs-error-border{
+	    border-width: 1px;
+	    border-color: rgb(208, 123, 122);
+	}
+
+/*table add按钮样式，表格上面的新增按钮样式，目前产品中的组织机构列表添加处使用*/
+/*
+.table-add{
+	margin-left: 5px;
+	float:right;
+	font-size: 14px;
+	font-weight: normal;
+	padding: 3px 5px;
+	cursor: pointer;
+	text-decoration: none;
+	font-family: Arial, "Microsoft YaHei", "SimSun", Tahoma, Helvetica, sans-serif;
+}
+.table-add:hover{
+	background-color: #2898e0;
+	border-radius: 3px;
+	text-decoration: none;
+	color: #fff;
+}
+*/
+/* form fieldset 样式*/
+	.pd-fieldset legend{
+	    font-size: 18px;
+	    color: #337ab7;
+	}
+
+	

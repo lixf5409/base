@@ -12,9 +12,13 @@ import java.util.Date;
  * Created by lixiaofeng on 2020/3/24.
  */
 @Controller
-public class IndexController {
+public class HomeController {
     @RequestMapping("/home")
     public String home(){
-        return "home";
+        return "home/home";
+    }
+    @RequestMapping("/page")
+    public String page(){
+        return "subHome/subHome";
     }
 }
