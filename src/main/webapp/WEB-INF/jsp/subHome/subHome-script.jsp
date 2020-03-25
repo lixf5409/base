@@ -40,7 +40,6 @@
 <script type="text/javascript" src="${ctx }/static/modules/requirejs/require-debug.js"></script>
 <!-- 引入require.config.js -->
 <script type="text/javascript" src="${ctx }/static/global/config.js"></script>
-
 <!-- 定义requireJs全局配置 -->
 <script type="text/javascript">
 	var baseUrl = getServer() || "/";

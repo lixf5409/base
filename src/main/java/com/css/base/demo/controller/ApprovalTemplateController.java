@@ -25,7 +25,12 @@ public class ApprovalTemplateController {
         return  approvalTemplateService.listApprovalTemplates(userId,curPage,pageSize,opinion);
     }
 
-
+    @PostMapping("listApprovalTemplatesForEasyUI")
+    public PageInfo<WfmApprovalTemplate> listApprovalTemplatesForEasyUI(@RequestParam String opinion,
+                                                               @RequestParam Integer page,@RequestParam Integer rows) throws Exception{
+        String userId = LoginUtils.getLoginUserId();
+        return  approvalTemplateService.listApprovalTemplates(userId,page,rows,opinion);
+    }
     @GetMapping("getApprovalTemplate")
     public WfmApprovalTemplate getApprovalTemplate(@RequestParam String id) throws Exception {
         return approvalTemplateService.getApprovalTemplate(id);

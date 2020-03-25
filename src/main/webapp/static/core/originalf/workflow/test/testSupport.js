@@ -26,22 +26,25 @@ define(["PDUtilDir/grid",
 	};
 	var initEasyUIGrid = function(){
         $("#testGrid").datagrid({
-            method:"get",
-            title:'审批意见列表',
-            url:'static/core/originalf/workflow/test/views/datagrid_data1.json',
+            url:getApprovalTemplateServerUrl() + "listApprovalTemplatesForEasyUI",
             columns:[[
-                {field:'productid',title:'productid',width:80,align:'center'},
-                {field:'productname',title:'productname',width:80,align:'center'}
+                {field:'opinion',title:'审批意见',width:'50%',align:'center'},
+                {field:'sort',title:'顺序号',width:'50%',align:'center'}
             ]],
-           toolbar: [{
-                iconCls: 'fa fa-save',
-                text:"新增",
-                handler: function(){alert('edit')}
+            toolbar: [{
+                iconCls: 'fa fa-plus-circle',
+                text:"添加",
+                handler: function(){registerNewButton()}
             },'-',{
-                iconCls: 'icon-help',
-                text:"帮助",
-                handler: function(){alert('help')}
+                iconCls: 'fa fa-trash-o',
+                text:"删除",
+                handler: function(){registerDelButton()}
             }],
+            queryParams:{
+                opinion: $("#opinion").val()||null
+            },
+            pagination: true,
+            pageSize: 10
         });
     };
 

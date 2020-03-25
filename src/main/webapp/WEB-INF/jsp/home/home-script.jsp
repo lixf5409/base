@@ -62,7 +62,7 @@
 	
 	require(["jquery", "Bootstrap"], function() {
 		require(["PDGlobalDir/base","easyui"], function() {
-			require([homeCtrl], function(Home) {
+			require([homeCtrl,"easyui-lang-zh_CN"], function(Home) {
 				Home();
 			})
 		})
