@@ -297,8 +297,8 @@ define([
 						url: getServer() + "/page",
 						iframe: true,
 						param:  {
-    						ctrl : menuData.menuCtrlUrl,
-    						html : menuData.menuUrl,
+    						// ctrl : menuData.menuCtrlUrl,
+    						// html : menuData.menuUrl,
     						//service : menu.menuService,
     						//tabId : menu.menuRouter //tab组件中自动添加tabId参数
 						}

@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.text.DateFormat;
 import java.util.Date;
 
@@ -20,9 +22,10 @@ public class HomeController {
         return "home/home";
     }
     @RequestMapping("/page")
-    public String page(@PathVariable(name = "ctrl") String ctrl, @RequestParam(name = "html") String html,Model model){
-        model.addAttribute("ctrl",ctrl);
-        model.addAttribute("html",html);
+    public String page(HttpServletRequest request, HttpServletResponse response,Model model){
+
+        request.getSession().setAttribute("ctrl","static/core/originalf/workflow/approvaltemplate/approvalTemplateCtrl");
+        request.getSession().setAttribute("html","static/core/originalf/workflow/approvaltemplate/views/index.html");
 
         return "subHome/subHome";
     }

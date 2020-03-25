@@ -13,6 +13,7 @@
 	pageContext.setAttribute("title", "测试");
 	
 	String html = request.getParameter("html");
+
 	if (html != null) {
 		// 先解码
 		html = URLDecoder.decode(html, "UTF-8");
@@ -21,6 +22,7 @@
 	}
 	
 	String ctrl = request.getParameter("ctrl");
+
 	if (ctrl != null) {
 		// 先解码
 		ctrl = URLDecoder.decode(ctrl, "UTF-8");

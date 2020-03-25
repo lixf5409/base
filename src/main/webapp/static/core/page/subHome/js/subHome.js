@@ -6,12 +6,15 @@ define([
     
 	function init() {
 		initJQValidate();
-		
+		//TODO 写死的
+        _htmlUrl = "static/core/originalf/workflow/approvaltemplate/views/index.html";
+        _ctrlUrl = "static/core/originalf/workflow/approvaltemplate/approvalTemplateCtrl";
 		if (_htmlUrl && _htmlUrl.length > 0 && _htmlUrl != 'null') {
 			_htmlUrl = getHtmlUrl(_htmlUrl);
 			
 			$.ajax({
 				url: _htmlUrl,
+                type: "GET",
 				dataType: "text",
 				success: function(html) {
 					//$(".body-wrap").html(html);

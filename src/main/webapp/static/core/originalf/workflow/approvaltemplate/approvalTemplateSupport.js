@@ -1,26 +1,24 @@
 define(["PDUtilDir/grid",
 	"PDUtilDir/util",
 	"PDUtilDir/tool",
-    "static/core/originalf/workflow/util/langUtils",
-    "text!static/core/originalf/workflow/lang/common.json",
-    "text!static/core/originalf/workflow/approvaltemplate/lang/approvaltemplate.json",
 	"ZTree",
-	"css!ZTreeCss"],function(Grid,Util,Tool,LangUtil,CommonLang,Lang){
+	"css!ZTreeCss"],function(Grid,Util,Tool){
 
-    var commonLang = LangUtil.getLocaleObject(CommonLang);
+    // var commonLang = LangUtil.getLocaleObject(CommonLang);
 	var sysPath =  getServer() + "/static/core/originalf/workflow";
 
-	var approvalTemplateHtml = sysPath + "/approvaltemplate/views/approvalTemplate"+LangUtil.getWfmLangFileSuffix()+".html";
+	// var approvalTemplateHtml = sysPath + "/approvaltemplate/views/approvalTemplate"+LangUtil.getWfmLangFileSuffix()+".html";
+	var approvalTemplateHtml = sysPath + "/approvaltemplate/views/approvalTemplate.html";
 	var getApprovalTemplateServerUrl = function(){
-		return getServicePath() + "/wfm/ApprovalTemplateServiceContainer/";
+		return getServer() + "/wfm/ApprovalTemplateServiceContainer/";
 	};
 	/**
 	 * 页面初始化
 	 */
 	var init = function(){
-	    alert("init approval template");
+	    // alert("init approval template");
 		//初始化列表
-		// createApprovalTemplateGrid();
+		createApprovalTemplateGrid();
 	};
 
 	//创建审批意见表格

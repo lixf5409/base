@@ -60,8 +60,12 @@ define(["jquery"], function(){
   				Menu.formatData.call(_this);
   			}
   		});*/
+    	//TODO 暂时写死
         _this.data = [{"menu":{"extend1":null,"extend2":null,"extend3":null,"extend4":null,"extend5":null,"menuAuthType":null,"menuCtrl":null,"menuCtrlUrl":null,"menuDesc":"根目录","menuEnable":"Y","menuHelp":null,"menuIcon":null,"menuId":"root","menuName":"根目录","menuOpen":null,"menuOrder":0,"menuPid":"-1","menuRouter":null,"menuType":"1","menuUrl":null},"subMenu":[{"menu":{"extend1":null,"extend2":null,"extend3":null,"extend4":null,"extend5":null,"menuAuthType":null,"menuCtrl":null,"menuCtrlUrl":null,"menuDesc":null,"menuEnable":"Y","menuHelp":null,"menuIcon":"fa fa-cog","menuId":"ab14fbe7ad1d4ee59c4fa4c73ea5a305","menuName":"流程管理","menuOpen":null,"menuOrder":2,"menuPid":"root","menuRouter":null,"menuType":"1","menuUrl":null},
-                    "subMenu":[{"menu":{"extend1":null,"extend2":null,"extend3":null,"extend4":null,"extend5":null,"menuAuthType":null,"menuCtrl":"wfm_approvalTemplateCtrl","menuCtrlUrl":"static/core/originalf/workflow/approvaltemplate/approvalTemplateCtrl","menuDesc":null,"menuEnable":"Y","menuHelp":null,"menuIcon":null,"menuId":"f159508365a84655a5ecd982c994f289","menuName":"审批意见模板","menuOpen":"1","menuOrder":2,"menuPid":"ab14fbe7ad1d4ee59c4fa4c73ea5a305","menuRouter":"wfm_approvalTemplate","menuType":"2","menuUrl":"static/core/originalf/workflow/approvaltemplate/views/index.html"},"subMenu":null}]}]}];
+                    "subMenu":[
+                        {"menu":{"extend1":null,"extend2":null,"extend3":null,"extend4":null,"extend5":null,"menuAuthType":null,"menuCtrl":"wfm_approvalTemplateCtrl","menuCtrlUrl":"static/core/originalf/workflow/approvaltemplate/approvalTemplateCtrl","menuDesc":null,"menuEnable":"Y","menuHelp":null,"menuIcon":null,"menuId":"f159508365a84655a5ecd982c994f289","menuName":"审批意见模板","menuOpen":"1","menuOrder":2,"menuPid":"ab14fbe7ad1d4ee59c4fa4c73ea5a305","menuRouter":"wfm_approvalTemplate","menuType":"2","menuUrl":"static/core/originalf/workflow/approvaltemplate/views/index.html"},"subMenu":null},
+                        {"menu":{"extend1":null,"extend2":null,"extend3":null,"extend4":null,"extend5":null,"menuAuthType":null,"menuCtrl":"wfm_test","menuCtrlUrl":"static/core/originalf/workflow/test/testCtrl","menuDesc":null,"menuEnable":"Y","menuHelp":null,"menuIcon":null,"menuId":"f159508365a84655a5ecd982c994f281","menuName":"测试","menuOpen":"1","menuOrder":2,"menuPid":"ab14fbe7ad1d4ee59c4fa4c73ea5a305","menuRouter":"wfm_test","menuType":"2","menuUrl":"static/core/originalf/workflow/test/views/test.html"},"subMenu":null},
+                        ]}]}];
 
         Menu.formatData.call(_this);
     };
