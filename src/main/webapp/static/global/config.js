@@ -5,6 +5,7 @@ require.config({
     paths:{
         //基础模块配置
         "jquery":"static/modules/jquery/jquery-2.1.3.min",
+        "easyui":"static/modules/easyui/jquery.easyui.min",
         //"JQuery.validate":"static/modules/jquery/plugins/validate/jquery.validate.min",
         //"JQuery.validate.extra":"static/modules/jquery/plugins/validate/additional-methods",
         //"JQuery.validate.message":"static/modules/jquery/plugins/validate/localization/messages_zh",

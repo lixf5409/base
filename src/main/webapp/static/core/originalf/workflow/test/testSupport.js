@@ -19,10 +19,31 @@ define(["PDUtilDir/grid",
 	 * 页面初始化
 	 */
 	var init = function(){
-	    alert("init test");
+	    // alert("init test");
+        initEasyUIGrid();
 		//初始化列表
-		createApprovalTemplateGrid();
+		// createApprovalTemplateGrid();
 	};
+	var initEasyUIGrid = function(){
+        $("#testGrid").datagrid({
+            method:"get",
+            title:'审批意见列表',
+            url:'static/core/originalf/workflow/test/views/datagrid_data1.json',
+            columns:[[
+                {field:'productid',title:'productid',width:80,align:'center'},
+                {field:'productname',title:'productname',width:80,align:'center'}
+            ]],
+           toolbar: [{
+                iconCls: 'fa fa-save',
+                text:"新增",
+                handler: function(){alert('edit')}
+            },'-',{
+                iconCls: 'icon-help',
+                text:"帮助",
+                handler: function(){alert('help')}
+            }],
+        });
+    };
 
 	//创建审批意见表格
 	var createApprovalTemplateGrid = function() {

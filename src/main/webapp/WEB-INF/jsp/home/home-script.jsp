@@ -34,6 +34,7 @@
 <script type="text/javascript" src="${ctx }/static/modules/requirejs/require.js"></script>
 <!-- 引入require.config.js -->
 <script type="text/javascript" src="${ctx }/static/global/config.js"></script>
+
 <!-- 定义requireJs全局配置 -->
 <script type="text/javascript">
 	var baseUrl = getServer() || "/";
@@ -60,7 +61,7 @@
 	var homeCtrl = getServer() + "/static/core/page/home/js/home.js";
 	
 	require(["jquery", "Bootstrap"], function() {
-		require(["PDGlobalDir/base"], function() {
+		require(["PDGlobalDir/base","easyui"], function() {
 			require([homeCtrl], function(Home) {
 				Home();
 			})

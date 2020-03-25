@@ -34,7 +34,7 @@
 		var subHomeCtrl = getServer() + "/static/core/page/subHome/js/subHome.js";
 		
 		require(["jquery", "Bootstrap"], function() {
-			require(["PDGlobalDir/base"], function() {
+			require(["PDGlobalDir/base","easyui"], function() {
 				require([subHomeCtrl], function(SubHome) {
 					SubHome();
 				})

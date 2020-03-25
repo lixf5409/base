@@ -11,3 +11,7 @@
 <link rel="stylesheet" href="${ctx }/static/core/page/home/css/menu.css"/>
 <!-- 页签导航样式 -->
 <link rel="stylesheet" href="${ctx }/static/core/page/home/css/tabs.css"/>
+<!-- easy ui-->
+<link rel="stylesheet" type="text/css" href="${ctx }/static/modules/easyui/themes/default/easyui.css">
+<!-- easy ui-->
+<link rel="stylesheet" type="text/css" href="${ctx }/static/modules/easyui/themes/icon.css">

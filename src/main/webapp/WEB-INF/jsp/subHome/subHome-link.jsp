@@ -6,10 +6,17 @@
 <link rel="stylesheet" href="${ctx }/static/modules/Font-Awesome/css/font-awesome.min.css" />
 <!-- 组件样式 -->
 <link rel="stylesheet" href="${ctx }/static/modules/util/css/components.css" />
+<!-- easy ui-->
+<link rel="stylesheet" type="text/css" href="${ctx }/static/modules/easyui/themes/default/easyui.css">
+<!-- easy ui-->
+<link rel="stylesheet" type="text/css" href="${ctx }/static/modules/easyui/themes/icon.css">
 <!-- 页面公共样式 -->
 <link rel="stylesheet" href="${ctx }/static/core/page/subHome/css/subHome.css" />
 <!-- 给项目组预留的css -->
 <link rel="stylesheet" href="${ctx }/static/app/app.css"/>
+
+
+
 
 <style>
 	.body-wrap{
