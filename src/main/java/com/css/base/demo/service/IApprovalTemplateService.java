@@ -10,7 +10,7 @@ import java.util.Map;
 /**
  * Created by lixiaofeng on 2015/4/14.
  */
-public interface IApprovalTemplateLogic {
+public interface IApprovalTemplateService {
     public List<WfmApprovalTemplate> listApprovalTemplates(String userId) throws Exception;
     public PageInfo<WfmApprovalTemplate> listApprovalTemplates(String userId, int curPage, int pageSize, String opinion) throws Exception;
     public WfmApprovalTemplate getApprovalTemplate(String id) throws Exception;

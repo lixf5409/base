@@ -22,10 +22,10 @@ public class HomeController {
         return "home/home";
     }
     @RequestMapping("/page")
-    public String page(HttpServletRequest request, HttpServletResponse response,Model model){
+    public String page(@RequestParam String ctrl,@RequestParam String html,Model model){
 
-        request.getSession().setAttribute("ctrl","static/core/originalf/workflow/approvaltemplate/approvalTemplateCtrl");
-        request.getSession().setAttribute("html","static/core/originalf/workflow/approvaltemplate/views/index.html");
+        model.addAttribute("ctrl",ctrl);
+        model.addAttribute("html",ctrl);
 
         return "subHome/subHome";
     }

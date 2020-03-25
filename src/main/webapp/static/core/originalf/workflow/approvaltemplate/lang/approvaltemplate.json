@@ -1,0 +1,18 @@
+{
+  "cn":{
+    "approvalOpinion":"审批意见",
+    "no":"顺序号",
+    "validApprovalOpinion":"请填写审批意见",
+    "validLong":"长度不可以超过256",
+    "validNo":"顺序号必须是小于256的正整数",
+    "isDelete":"是否要删除选中的审批意见？"
+  },
+  "en":{
+    "approvalOpinion":"Approval opinion",
+    "no":"Sequence number",
+    "validApprovalOpinion":"Please fill in the approval opinions",
+    "validLong":"No longer than 256",
+    "validNo":"The sequence number must be a positive integer less than 256",
+    "isDelete":"Do you want to delete the selected approval opinions?"
+  }
+}

@@ -1,16 +1,19 @@
 define(["PDUtilDir/grid",
 	"PDUtilDir/util",
 	"PDUtilDir/tool",
+    "static/core/originalf/workflow/util/langUtils",
+    "text!static/core/originalf/workflow/lang/common.json",
+    "text!static/core/originalf/workflow/approvaltemplate/lang/approvaltemplate.json",
 	"ZTree",
-	"css!ZTreeCss"],function(Grid,Util,Tool){
+	"css!ZTreeCss"],function(Grid,Util,Tool,LangUtil,CommonLang,Lang){
 
-    // var commonLang = LangUtil.getLocaleObject(CommonLang);
-	var sysPath =  getServer() + "/static/core/originalf/workflow";
+    var commonLang = LangUtil.getLocaleObject(CommonLang);
+    var lang = LangUtil.getLocaleObject(Lang);
+    var sysPath =  getServer() + "/static/core/originalf/workflow";
 
-	// var approvalTemplateHtml = sysPath + "/approvaltemplate/views/approvalTemplate"+LangUtil.getWfmLangFileSuffix()+".html";
-	var approvalTemplateHtml = sysPath + "/approvaltemplate/views/approvalTemplate.html";
+    var approvalTemplateHtml = sysPath + "/approvaltemplate/views/approvalTemplate"+LangUtil.getWfmLangFileSuffix()+".html";
 	var getApprovalTemplateServerUrl = function(){
-		return getServer() + "/wfm/ApprovalTemplateServiceContainer/";
+		return getServer() + "/wfm/ApprovalTemplateController/";
 	};
 	/**
 	 * 页面初始化

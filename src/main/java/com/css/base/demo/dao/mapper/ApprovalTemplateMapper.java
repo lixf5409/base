@@ -13,7 +13,7 @@ import java.util.Map;
  */
 @Mapper()
 @Repository("approvalTemplate")
-public interface approvalTemplateMapper {
+public interface ApprovalTemplateMapper {
     public void persist(WfmApprovalTemplate approvalTemplate) throws Exception;
     public List<WfmApprovalTemplate> listApprovalTemplates(String userId) throws Exception;
     public List<WfmApprovalTemplate> queryApprovalTemplates(String userId, String opinion) throws Exception;
