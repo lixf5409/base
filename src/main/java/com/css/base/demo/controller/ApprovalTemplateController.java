@@ -33,11 +33,13 @@ public class ApprovalTemplateController {
     @PostMapping("saveApprovalTemplate")
     public JSONObject saveApprovalTemplate(WfmApprovalTemplate approvalTemplate) throws Exception {
         JSONObject json = new JSONObject();
+        String userId = LoginUtils.getLoginUserId();
+        approvalTemplate.setUserId(userId);
         approvalTemplateService.saveApprovalTemplate(approvalTemplate);
         json.put("message", "保存成功!");
         return json;
     }
-    @DeleteMapping("deleteApprovalTemplates")
+    @PostMapping("deleteApprovalTemplates")
     public JSONObject deleteApprovalTemplates(@RequestParam String ids) throws Exception {
         JSONObject json = new JSONObject();
         List<String> idList = Arrays.asList(ids.split(","));

@@ -84,7 +84,7 @@ define(["PDUtilDir/grid",
 		$.ajax({
 			url: getApprovalTemplateServerUrl() + "getApprovalTemplate",
 			data: {id : id},
-			type: "post",
+			type: "get",
 			success: function (data) {
 				Tool.deserialize("approvalTemplateForm", data);
 			}
