@@ -1,0 +1,20 @@
+@CHARSET "UTF-8";
+
+.wfm-upload {
+	
+}
+.webuploader-pick{
+
+}
+.wfm-upload .wfm-upload-span{
+	padding:5px;
+}
+#wfmApprovalAttachmentBtn .webuploader-pick-hover {
+	background-color: inherit;
+}
+#wfmApprovalAttachmentBtn .webuploader-pick-hover a{
+	background-color: inherit!important;
+}
+#wfmApprovalAttachmentBtn .webuploader-pick a{
+	color:#333;
+}
