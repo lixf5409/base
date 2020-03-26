@@ -37,7 +37,7 @@ public class ApprovalTemplateNativeRepositoryImpl implements IApprovalTemplateNa
         if(!ToolUtils.isEmpty(opinion)){
             query.setParameter(2,opinion);
         }
-        query.setFirstResult(curPage);
+        query.setFirstResult((curPage -1) * pageSize);
         query.setMaxResults(pageSize);
         List<ApprovalTemplate> list = query.getResultList();
 
@@ -48,7 +48,7 @@ public class ApprovalTemplateNativeRepositoryImpl implements IApprovalTemplateNa
             countQuery.setParameter(2,opinion);
         }
         BigInteger count = (BigInteger) countQuery.getSingleResult();
-        Pageable pageable = PageRequest.of(curPage,pageSize);
+        Pageable pageable = PageRequest.of(curPage -1 ,pageSize);
         Page<ApprovalTemplate> approvalTemplates = new PageImpl<ApprovalTemplate>(list, pageable,count.longValue());
         return approvalTemplates;
     }

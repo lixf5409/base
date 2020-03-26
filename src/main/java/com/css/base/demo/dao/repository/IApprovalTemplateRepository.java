@@ -19,7 +19,6 @@ public interface IApprovalTemplateRepository extends JpaRepository<ApprovalTempl
     public List<ApprovalTemplate> listApprovalTemplates(String userId) throws Exception;
 
     @Modifying
-    @Transactional
     @Query("delete from ApprovalTemplate where id in (?1)")
     public void deleteApprovalTemplates(List<String> ids) throws Exception;
 }

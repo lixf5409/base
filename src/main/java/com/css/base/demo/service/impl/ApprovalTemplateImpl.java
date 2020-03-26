@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 /**
@@ -42,6 +43,7 @@ public class ApprovalTemplateImpl implements IApprovalTemplateService {
         }
         approvalTemplateRepository.save(approvalTemplate);
     }
+    @Transactional
     public void deleteApprovalTemplates(List<String> ids) throws Exception {
         approvalTemplateRepository.deleteApprovalTemplates(ids);
     }
