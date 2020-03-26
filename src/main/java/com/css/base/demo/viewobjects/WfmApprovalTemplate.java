@@ -1,4 +1,4 @@
-package com.css.base.demo.dao.entity;
+package com.css.base.demo.viewobjects;
 
 
 import java.io.Serializable;

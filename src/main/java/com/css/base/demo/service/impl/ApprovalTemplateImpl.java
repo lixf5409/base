@@ -4,12 +4,12 @@ package com.css.base.demo.service.impl;
 import com.css.base.demo.common.utils.DateUtils;
 import com.css.base.demo.common.utils.ToolUtils;
 import com.css.base.demo.common.utils.UUIDGenerator;
-import com.css.base.demo.dao.mapper.ApprovalTemplateMapper;
+import com.css.base.demo.dao.repository.IApprovalTemplateNativeRepository;
+import com.css.base.demo.dao.repository.IApprovalTemplateRepository;
 import com.css.base.demo.service.IApprovalTemplateService;
-import com.css.base.demo.dao.entity.WfmApprovalTemplate;
-import com.github.pagehelper.PageHelper;
-import com.github.pagehelper.PageInfo;
+import com.css.base.demo.viewobjects.WfmApprovalTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -20,18 +20,17 @@ import java.util.List;
 @Service("approvalTemplateLogic")
 public class ApprovalTemplateImpl implements IApprovalTemplateService {
     @Autowired
-    ApprovalTemplateMapper approvalTemplateMapper;
+    IApprovalTemplateRepository approvalTemplateRepository;
+    @Autowired
+    IApprovalTemplateNativeRepository approvalTemplateNativeRepository;
     public List<WfmApprovalTemplate> listApprovalTemplates(String userId) throws Exception {
-        return approvalTemplateMapper.listApprovalTemplates(userId);
+        return approvalTemplateRepository.listApprovalTemplates(userId);
     }
-    public PageInfo<WfmApprovalTemplate> listApprovalTemplates(String userId, int curPage, int pageSize, String opinion) throws Exception {
-        PageHelper.startPage(curPage, pageSize);
-        List<WfmApprovalTemplate> list = approvalTemplateMapper.queryApprovalTemplates(userId,opinion);
-        PageInfo<WfmApprovalTemplate> pageInfo =  new PageInfo<WfmApprovalTemplate>(list);
-        return pageInfo;
+    public Page<WfmApprovalTemplate> listApprovalTemplates(String userId, String opinion, int curPage, int pageSize) throws Exception {
+        return approvalTemplateNativeRepository.queryApprovalTemplates(userId,opinion,curPage,pageSize);
     }
     public WfmApprovalTemplate getApprovalTemplate(String id) throws Exception {
-        return approvalTemplateMapper.getApprovalTemplate(id);
+        return approvalTemplateRepository.getOne(id);
     }
     public void saveApprovalTemplate(WfmApprovalTemplate approvalTemplate) throws Exception {
         if(ToolUtils.isEmpty(approvalTemplate.getId())) {
@@ -41,10 +40,10 @@ public class ApprovalTemplateImpl implements IApprovalTemplateService {
         }else{
             approvalTemplate.setUpdatetime(DateUtils.getCurrentTimestamp());
         }
-        approvalTemplateMapper.persist(approvalTemplate);
+        approvalTemplateRepository.save(approvalTemplate);
     }
     public void deleteApprovalTemplates(List<String> ids) throws Exception {
-        approvalTemplateMapper.deleteApprovalTemplates(ids);
+        approvalTemplateRepository.deleteApprovalTemplates(ids);
     }
 
 }
