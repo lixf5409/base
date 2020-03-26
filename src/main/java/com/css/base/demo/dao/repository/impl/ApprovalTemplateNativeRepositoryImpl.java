@@ -2,8 +2,8 @@ package com.css.base.demo.dao.repository.impl;
 
 
 import com.css.base.demo.common.utils.ToolUtils;
+import com.css.base.demo.dao.entity.ApprovalTemplate;
 import com.css.base.demo.dao.repository.IApprovalTemplateNativeRepository;
-import com.css.base.demo.viewobjects.WfmApprovalTemplate;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
@@ -22,7 +22,7 @@ import java.util.List;
 public class ApprovalTemplateNativeRepositoryImpl implements IApprovalTemplateNativeRepository {
     @PersistenceContext
     EntityManager entityManager;
-    public Page<WfmApprovalTemplate> queryApprovalTemplates(String userId, String opinion,int curPage,int pageSize) throws Exception{
+    public Page<ApprovalTemplate> queryApprovalTemplates(String userId, String opinion, int curPage, int pageSize) throws Exception{
         StringBuilder sql = new StringBuilder("select * from wfm_approvaltemplate ");
         StringBuilder whereSql = new StringBuilder("where userId=? ");
         if(!ToolUtils.isEmpty(opinion)){
@@ -30,7 +30,7 @@ public class ApprovalTemplateNativeRepositoryImpl implements IApprovalTemplateNa
         }
         StringBuilder orderSql = new StringBuilder(" order by sort");
 
-        Query query = entityManager.createNativeQuery(sql.append(whereSql).append(orderSql).toString(),WfmApprovalTemplate.class);
+        Query query = entityManager.createNativeQuery(sql.append(whereSql).append(orderSql).toString(),ApprovalTemplate.class);
         query.setParameter(1,userId);
         if(!ToolUtils.isEmpty(opinion)){
             query.setParameter(2,opinion);
@@ -39,9 +39,9 @@ public class ApprovalTemplateNativeRepositoryImpl implements IApprovalTemplateNa
         Long count = (Long) countQuery.getSingleResult();
         query.setFirstResult(curPage);
         query.setMaxResults(pageSize);
-        List<WfmApprovalTemplate> list = query.getResultList();
+        List<ApprovalTemplate> list = query.getResultList();
         Pageable pageable = PageRequest.of(curPage,pageSize);
-        Page<WfmApprovalTemplate> approvalTemplates = new PageImpl<WfmApprovalTemplate>(list, pageable, count);
+        Page<ApprovalTemplate> approvalTemplates = new PageImpl<ApprovalTemplate>(list, pageable, count);
         return approvalTemplates;
     }
 }

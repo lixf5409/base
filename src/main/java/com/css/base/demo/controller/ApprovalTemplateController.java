@@ -3,8 +3,8 @@ package com.css.base.demo.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import com.css.base.demo.common.utils.LoginUtils;
+import com.css.base.demo.dao.entity.ApprovalTemplate;
 import com.css.base.demo.service.IApprovalTemplateService;
-import com.css.base.demo.viewobjects.WfmApprovalTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
@@ -19,18 +19,18 @@ public class ApprovalTemplateController {
     @Autowired
     IApprovalTemplateService approvalTemplateService;
     @PostMapping("listApprovalTemplates")
-    public Page<WfmApprovalTemplate> listApprovalTemplates(@RequestParam String opinion,
-                                                           @RequestParam Integer curPage, @RequestParam Integer pageSize) throws Exception{
+    public Page<ApprovalTemplate> listApprovalTemplates(@RequestParam String opinion,
+                                                        @RequestParam Integer curPage, @RequestParam Integer pageSize) throws Exception{
         String userId = LoginUtils.getLoginUserId();
         return  approvalTemplateService.listApprovalTemplates(userId,opinion,curPage,pageSize);
     }
 
     @GetMapping("getApprovalTemplate")
-    public WfmApprovalTemplate getApprovalTemplate(@RequestParam String id) throws Exception {
+    public ApprovalTemplate getApprovalTemplate(@RequestParam String id) throws Exception {
         return approvalTemplateService.getApprovalTemplate(id);
     }
     @PostMapping("saveApprovalTemplate")
-    public JSONObject saveApprovalTemplate(WfmApprovalTemplate approvalTemplate) throws Exception {
+    public JSONObject saveApprovalTemplate(ApprovalTemplate approvalTemplate) throws Exception {
         JSONObject json = new JSONObject();
         String userId = LoginUtils.getLoginUserId();
         approvalTemplate.setUserId(userId);
