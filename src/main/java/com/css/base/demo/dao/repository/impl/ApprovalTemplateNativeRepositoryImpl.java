@@ -30,12 +30,12 @@ public class ApprovalTemplateNativeRepositoryImpl implements IApprovalTemplateNa
         }
         StringBuilder orderSql = new StringBuilder(" order by sort");
 
-        Query query = entityManager.createNativeQuery(sql.toString(),WfmApprovalTemplate.class);
+        Query query = entityManager.createNativeQuery(sql.append(whereSql).append(orderSql).toString(),WfmApprovalTemplate.class);
         query.setParameter(1,userId);
         if(!ToolUtils.isEmpty(opinion)){
             query.setParameter(2,opinion);
         }
-        Query countQuery = this.entityManager.createQuery(sql.append(whereSql).toString(),Long.class);
+        Query countQuery = entityManager.createQuery(sql.append(whereSql).toString(),Long.class);
         Long count = (Long) countQuery.getSingleResult();
         query.setFirstResult(curPage);
         query.setMaxResults(pageSize);
