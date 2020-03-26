@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * Created by lixiaofeng on 2015/4/14.
  */
-@Repository("approvalTemplateRepositoryNative")
+
 public interface IApprovalTemplateNativeRepository {
     public Page<ApprovalTemplate> queryApprovalTemplates(String userId, String opinion, int curPage, int pageSize) throws Exception;
 }

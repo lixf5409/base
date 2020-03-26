@@ -19,6 +19,7 @@ import java.util.List;
 /**
  * Created by lixiaofeng on 2015/4/14.
  */
+@Repository("approvalTemplateRepositoryNative")
 public class ApprovalTemplateNativeRepositoryImpl implements IApprovalTemplateNativeRepository {
     @PersistenceContext
     EntityManager entityManager;
