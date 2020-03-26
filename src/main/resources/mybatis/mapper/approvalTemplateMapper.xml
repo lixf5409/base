@@ -63,7 +63,7 @@
         <if test="opinion != null and opinion != '' " >
             and opinion like '%' + #{opinion} + '%' ,
         </if>
-       order by sort
+        order by sort
     </select>
     <delete id="deleteApprovalTemplates" parameterType="java.util.List">
         delete from wfm_approvaltemplate  where id in
