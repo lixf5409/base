@@ -59,8 +59,8 @@ define([
             draggable:false,
             textEllipsis:true,
             key:{
-                "total" : "dataCount",
-                "list" : "pageData"
+                "totalElements" : "dataCount",
+                "content" : "pageData"
             },
             queryParam:{},
             layout:[],

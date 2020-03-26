@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 /**
@@ -18,6 +19,7 @@ public interface IApprovalTemplateRepository extends JpaRepository<ApprovalTempl
     public List<ApprovalTemplate> listApprovalTemplates(String userId) throws Exception;
 
     @Modifying
+    @Transactional
     @Query("delete from ApprovalTemplate where id in (?1)")
     public void deleteApprovalTemplates(List<String> ids) throws Exception;
 }

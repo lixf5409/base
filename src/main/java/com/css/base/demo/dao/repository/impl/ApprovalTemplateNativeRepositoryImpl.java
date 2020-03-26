@@ -14,6 +14,7 @@ import org.springframework.stereotype.Repository;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import java.math.BigInteger;
 import java.util.List;
 
 /**
@@ -27,7 +28,7 @@ public class ApprovalTemplateNativeRepositoryImpl implements IApprovalTemplateNa
         StringBuilder sql = new StringBuilder("select * from wfm_approvaltemplate ");
         StringBuilder whereSql = new StringBuilder("where userId=? ");
         if(!ToolUtils.isEmpty(opinion)){
-            sql.append(" and opinion like ?");
+            whereSql.append(" and opinion like ?");
         }
         StringBuilder orderSql = new StringBuilder(" order by sort");
 
@@ -36,13 +37,19 @@ public class ApprovalTemplateNativeRepositoryImpl implements IApprovalTemplateNa
         if(!ToolUtils.isEmpty(opinion)){
             query.setParameter(2,opinion);
         }
-        Query countQuery = entityManager.createQuery(sql.append(whereSql).toString(),Long.class);
-        Long count = (Long) countQuery.getSingleResult();
         query.setFirstResult(curPage);
         query.setMaxResults(pageSize);
         List<ApprovalTemplate> list = query.getResultList();
+
+        StringBuilder countSql = new StringBuilder("select count(*) from wfm_approvaltemplate ");
+        Query countQuery = entityManager.createNativeQuery(countSql.append(whereSql).toString());
+        countQuery.setParameter(1,userId);
+        if(!ToolUtils.isEmpty(opinion)){
+            countQuery.setParameter(2,opinion);
+        }
+        BigInteger count = (BigInteger) countQuery.getSingleResult();
         Pageable pageable = PageRequest.of(curPage,pageSize);
-        Page<ApprovalTemplate> approvalTemplates = new PageImpl<ApprovalTemplate>(list, pageable, count);
+        Page<ApprovalTemplate> approvalTemplates = new PageImpl<ApprovalTemplate>(list, pageable,count.longValue());
         return approvalTemplates;
     }
 }

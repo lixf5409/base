@@ -15,7 +15,7 @@ import java.sql.Timestamp;
 public class ApprovalTemplate implements Serializable {
 	@Id
 	private String id;
-	@Column(name="userId")
+	@Column(name="userid")
 	private String userId;
     @Column(name="opinion")
 	private String opinion;
