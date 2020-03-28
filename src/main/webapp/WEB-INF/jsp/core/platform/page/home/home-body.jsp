@@ -3,7 +3,7 @@
 		<div class="rx-header">
 			<div class="rx-logo">
 				<div class="rx-logo-img">
-					<img src="${ctx }/static/core/page/home/image/original-logo.png" />
+					<img src="${ctx }/static/core/platform/page/home/image/original-logo.png" />
 				</div><h1 class="rx-logo-title">${title }</h1>
 			</div>
 			<div class="rx-user">

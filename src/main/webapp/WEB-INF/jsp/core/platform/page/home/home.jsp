@@ -18,8 +18,8 @@
     
     <!-- IE8响应式布局 兼容性js文件 -->
     <!--[if lte IE 8]>
-    <script src="${ctx }/static/modules/ace/dist/js/html5shiv.min.js"></script>
-    <script src="${ctx }/static/modules/ace/dist/js/respond.min.js"></script>
+    <script src="${ctx }/static/core/platform/lib/ace/dist/js/html5shiv.min.js"></script>
+    <script src="${ctx }/static/core/platform/lib/ace/dist/js/respond.min.js"></script>
     <![endif]-->
 </head>
 

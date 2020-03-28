@@ -2,17 +2,11 @@
 
 <!--  定义全局变量 -->
 <script type="text/javascript">
-	//html
-	var _htmlUrl = '${_htmlUrl }';
-	//ctrl
-	var _ctrlUrl = '${_ctrlUrl }';
-	//tabId
-	var _tabId 	 = '${_tabId }';
-	var _extend1 = '${_extend1}';
-	var _extend2 = '${_extend2}';
-	var _extend3 = '${_extend3}';
-	var _extend4 = '${_extend4}';
-	var _extend5 = '${_extend5}';
+	// 欢迎页参数
+    var _welcomeHtml = '${welcomeHtml }';
+	var _welcomeCtrl = '${welcomeCtrl }';
+	var _welcomeOpen = '${welcomeOpen }';
+
 </script>
 
 <!-- 定义全局方法-->
@@ -37,16 +31,17 @@
 </script>
 
 <!-- 引入requireJS -->
-<script type="text/javascript" src="${ctx }/static/modules/requirejs/require-debug.js"></script>
+<script type="text/javascript" src="${ctx }/static/core/platform/lib/requirejs/require.js"></script>
 <!-- 引入require.config.js -->
-<script type="text/javascript" src="${ctx }/static/global/config.js"></script>
+<script type="text/javascript" src="${ctx }/static/core/platform/global/config.js"></script>
+
 <!-- 定义requireJs全局配置 -->
 <script type="text/javascript">
 	var baseUrl = getServer() || "/";
 	require.config({
 		baseUrl : baseUrl/* ,
 		paths : {
-			"jquery":"static/modules/jquery/jquery-2.1.3.min"
+			"jquery":"static/core/platform/lib/jquery/jquery-2.1.3.min"
 		} */
 	})
 </script>
@@ -55,8 +50,21 @@
 <script type="text/javascript">
     require.config({
     	paths:{
-    		"jquery":"static/modules/jquery/jquery1x.min"
+    		"jquery":"static/core/platform/lib/jquery/jquery1x.min"
    		}
 	});
 </script>
 <![endif]-->
+
+<!-- 程序入口 -->
+<script type="text/javascript">
+	var homeCtrl = getServer() + "/static/core/platform/page/home/js/home.js";
+
+	require(["jquery", "Bootstrap"], function() {
+		require(["PDGlobalDir/base","easyui"], function() {
+			require([homeCtrl,"easyui-lang-zh_CN"], function(Home) {
+				Home();
+			})
+		})
+	})
+</script>
