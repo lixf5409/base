@@ -16,7 +16,7 @@ import java.util.Date;
  * Created by lixiaofeng on 2020/3/24.
  */
 @Controller
-public class HomeController {
+public class PageController {
     @RequestMapping("/home")
     public String home(){
         return "core/platform/page/home/home";
