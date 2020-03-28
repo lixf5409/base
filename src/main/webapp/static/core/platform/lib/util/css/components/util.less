@@ -1,0 +1,145 @@
+/*附件上传*/
+.cs-upload{
+    border: 1px #CCC solid;
+}
+
+.cs-upload table tr:first-child{
+    border-bottom: #ccc solid 1px;
+    background-color: #f9f9f9;
+}
+.cs-upload table tr:first-child td{
+    border-right: 1px solid #ddd;
+}
+.cs-upload table tr:first-child td:last-child{
+    border-right: none;
+}
+
+.cs-upload table td i:hover{
+    color: #2898e0;
+    cursor: pointer;
+}
+/*防止附件名称过长*/
+.cs-mUpload-filename{
+    max-width:250px;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden;
+}
+.cs-upload-toolbar{
+    background-color: #f9f9f9;
+    height: 35px;
+}
+.cs-upload-toolbar ul{
+    list-style: none;
+    float: left;
+    margin: 10px 0;
+    padding: 0;
+}
+.cs-upload-toolbar ul li.first
+{
+    border-left:0;
+    padding-left: 5px;
+}
+.cs-upload-toolbar ul li{
+    float: left;
+    font-size: 14px;
+    line-height: 15px;
+    border-left: 1px solid #c9c9c9;
+    margin-left: 15px;
+    padding-left: 15px;
+    font-family: Arial, "微软雅黑", "宋体", Tahoma, Helvetica, sans-serif;
+}
+.cs-upload-toolbar ul li a{
+    padding: 5px;
+    display: inline-block;
+    margin: -5px 0;
+    border-radius: 5px;
+}
+.cs-upload-toolbar ul li a:hover {
+    background-color: #2898e0!important;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cs-upload-status{
+    padding: 5px;
+    color: #d9534f;
+}
+
+/*简单附件上传*/
+.cs-sUpload{
+    position: relative;
+}
+.cs-sUpload .fa{
+    position: absolute;
+    top: 10px;
+}
+.cs-sUpload .fa:hover{
+    color: #2898e0;
+    cursor: pointer;
+}
+.cs-sUpload .fa-cloud-upload{
+    right: 26px;
+}
+.cs-sUpload .fa-upload{
+    right: 9px;
+    display: none;
+}
+.cs-sUpload .fa-pause{
+    right: 45px;
+    display: none;
+}
+.cs-sUpload .fa-times{
+    right: 26px;
+    display: none;
+}
+
+/*新版单附件上传*/
+.cs-single-upload{
+    position: relative;
+}
+.cs-single-upload .fa:hover{
+    color: #2898e0;
+    cursor: pointer;
+}
+.cs-sUpload-body .fa{
+    position: absolute;
+    top: 10px;
+}
+.cs-sUpload-body .fa-cloud-upload{
+    right: 15px;
+}
+.cs-sUpload-body .fa-upload{
+    right: 15px;
+    display: none;
+}
+.cs-sUpload-body .fa-pause{
+    right: 45px;
+    display: none;
+}
+.cs-sUpload-body .fa-times{
+    right: 26px;
+    display: none;
+}
+.cs-sUpload-status{
+    line-height: 34px;
+}
+/*解决文件名称过长*/
+.cs-sUpload-status a{
+	overflow: hidden;
+	max-width: 90%;
+	float: left;
+}
+.cs-sUpload-status .fa-times{
+    margin-left: 20px;
+}
+/*解决文件名称过长*/
+.webuploader-pick>input{
+	padding-right: 40px;
+}
+/*修改样式，解决高宽1px无法点击上传按钮的问题*/
+.webuploader-pick +div{
+    width: 100%!important;
+    height: 100%!important;
+}
