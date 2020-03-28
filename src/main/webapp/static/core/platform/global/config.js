@@ -40,8 +40,8 @@ require.config({
         "PDAppDir":"static/app",
         "PDCoreDir":"static/core",
         "PDGlobalDir":"static/core/platform/global",
-        "PDUtilDir":"static/core/platform/lib/util",
         "PDModuleDir":"static/core/platform/lib",
+        "PDUtilDir":"static/core/platform/components/util",
         "PDHomeDir":"static/core/platform/page/home",
         
         //Excel导入
