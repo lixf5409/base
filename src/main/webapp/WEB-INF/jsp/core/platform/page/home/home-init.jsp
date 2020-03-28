@@ -7,11 +7,11 @@
 	pageContext.setAttribute("ctx", contextPath);
 
     // title
-    pageContext.setAttribute("title", "base测试");
+    pageContext.setAttribute("title", "中软业务流程管理平台");
     // theme
 //    pageContext.setAttribute("theme", pageInfoVO.getTheme());
     // copyright
-    pageContext.setAttribute("copyright", "中国软件");
+    pageContext.setAttribute("copyright", "@Copyright中国软件与技术服务股份有限公司");
     // welcome
 		/*
 		pageContext.setAttribute("welcomeHtml", pageInfoVO.getWelcomeHtml());
