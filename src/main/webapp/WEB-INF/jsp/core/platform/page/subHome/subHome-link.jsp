@@ -5,7 +5,7 @@
 <!-- 字体图标 -->
 <link rel="stylesheet" href="${ctx }/static/core/platform/lib/Font-Awesome/css/font-awesome.min.css" />
 <!-- 组件样式 -->
-<link rel="stylesheet" href="${ctx }/static/core/platform/lib/util/css/components.css" />
+<link rel="stylesheet" href="${ctx }/static/core/platform/components/css/components.css" />
 <!-- easy ui-->
 <link rel="stylesheet" type="text/css" href="${ctx }/static/core/platform/lib/easyui/themes/default/easyui.css">
 <!-- easy ui-->
