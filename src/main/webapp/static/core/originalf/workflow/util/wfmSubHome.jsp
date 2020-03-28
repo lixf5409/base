@@ -1,7 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
 <%-- 页面初始化参数 --%>
-<%@include file="/static/core/page/subHome/subHome-init.jsp" %>
+<%@include file="/static/core/platform/page/subHome/subHome-init.jsp" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,12 +14,12 @@
     <title>${title }</title>
 
     <%-- 页面样式 --%>
-    <%@include file="/static/core/page/subHome/subHome-link.jsp" %>
+    <%@include file="/static/core/platform/page/subHome/subHome-link.jsp" %>
 
     <!-- IE8响应式布局 兼容性js文件 -->
     <!--[if lte IE 8]>
-    <script src="${ctx }/static/modules/ace/dist/js/html5shiv.min.js"></script>
-    <script src="${ctx }/static/modules/ace/dist/js/respond.min.js"></script>
+    <script src="${ctx }/static/lib/ace/dist/js/html5shiv.min.js"></script>
+    <script src="${ctx }/static/lib/ace/dist/js/respond.min.js"></script>
     <![endif]-->
 </head>
 
@@ -27,7 +27,7 @@
 <div class="body-wrap"></div>
 
 <!-- 页面公共script相关 -->
-<%@include file="/static/core/page/subHome/subHome-script.jsp" %>
+<%@include file="/static/core/platform/page/subHome/subHome-script.jsp" %>
 
 <!-- 程序逻辑入口 -->
 <script type="text/javascript">

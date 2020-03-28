@@ -19,7 +19,7 @@ import java.util.Date;
 public class HomeController {
     @RequestMapping("/home")
     public String home(){
-        return "home/home";
+        return "core/platform/page/home/home";
     }
     @RequestMapping("/page")
     public String page(@RequestParam String ctrl,@RequestParam String html,Model model){
@@ -27,6 +27,6 @@ public class HomeController {
         model.addAttribute("ctrl",ctrl);
         model.addAttribute("html",ctrl);
 
-        return "subHome/subHome";
+        return "core/platform/page/subHome/subHome";
     }
 }
