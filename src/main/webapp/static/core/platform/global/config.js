@@ -38,7 +38,7 @@ require.config({
 
         /*静态模块路径配置*/
         "PDAppDir":"static/app",
-        "PDCoreDir":"static/cor/platform",
+        "PDCoreDir":"static/core/platform",
         "PDGlobalDir":"static/core/platform/global",
         "PDModuleDir":"static/core/platform/lib",
         "PDUtilDir":"static/core/platform/components/util",
