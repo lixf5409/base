@@ -28,8 +28,11 @@ define(["PDUtilDir/grid",
         $("#testGrid").datagrid({
             url:getApprovalTemplateServerUrl() + "listApprovalTemplatesForEasyUI",
             columns:[[
-                {field:'opinion',title:'审批意见',width:'50%',align:'center'},
-                {field:'sort',title:'顺序号',width:'50%',align:'center'}
+                {field:'opinion',title:'审批意见',width:'50%',align:'left',
+					styler: function (value, row, index) {
+						return 'color:#337ab7;border-right: 0px;';
+					}},
+                {field:'sort',title:'顺序号',width:'50%',align:'left'}
             ]],
             toolbar: [{
                 iconCls: 'fa fa-plus-circle',
@@ -60,7 +63,7 @@ define(["PDUtilDir/grid",
 			pagination : true,                  //默认分页,
 			//cache:false,
 			layout:[
-				{name:"审批意见",field:"opinion",style:"width:80%",
+				{name:"审批意见",field:"opinion",style:"width:80%;",
 					click:function(e){	editApprovalTemplate(e.data.row)}
 				},
 				{name:"顺序号",field:"sort",style:"width:20%"}
